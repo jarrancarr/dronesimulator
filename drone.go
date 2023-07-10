@@ -126,7 +126,7 @@ func navigate(course chan FlightPattern, dest chan Location) {
 			}
 		case "counter-clockwise":
 			for len(course) == 0 {
-				pattern(dest, &flight.StartLocation, &flight.EndLocation, right, left, 1, 1, flight.StartLocation.speed)
+				pattern(dest, &flight.StartLocation, &flight.EndLocation, right, left, 1, -1, flight.StartLocation.speed)
 			}
 		case "patrol":
 			for len(course) == 0 { // as long as there are no other orders, keep patroling
